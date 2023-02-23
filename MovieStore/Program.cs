@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MovieStore.DatabaseOperations;
 using MovieStore.DatabaseOperations.Seed;
+using AutoMapper;
 
 namespace MovieStore
 {
@@ -15,8 +16,9 @@ namespace MovieStore
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             var app = builder.Build();
+
             using(var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;

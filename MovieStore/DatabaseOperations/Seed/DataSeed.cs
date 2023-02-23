@@ -28,10 +28,11 @@ namespace MovieStore.DatabaseOperations.Seed
                 context.Actors.AddRange(
                     new Actor
                     {
+                      
                         Name = "Asdas",
                         Surname = "Fasdas",
-                        Movie = new List<Movie>()
-
+                        
+                        
                     });
                 context.Genres.AddRange(
                     new Genre
@@ -45,6 +46,8 @@ namespace MovieStore.DatabaseOperations.Seed
                         Surname="BroSurname",
                         Movie=new List<Movie>()
                     });
+
+                context.SaveChanges();
                
             }
         }
