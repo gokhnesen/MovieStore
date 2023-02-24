@@ -29,29 +29,50 @@ namespace MovieStore.DatabaseOperations.Seed
                     new Actor
                     {
                       
-                        Name = "Asdas",
-                        Surname = "Fasdas",
+                        Name = "Orlando",
+                        Surname = "Bloom",
                         
                         
-                    });
+                    },
+                    new Actor
+                    {
+
+                        Name = "Sean",
+                        Surname = "Bean",
+
+
+                    }
+                    );
+
                 context.Genres.AddRange(
                     new Genre
                     {
-                        Name="Sci-fi"
+                        Name="Science Fiction"
                     });
                 context.Directors.AddRange(
                     new Director
                     {
-                        Name="Brodirector",
-                        Surname="BroSurname",
+                        Name="Peter",
+                        Surname="Jackson",
                     });
                 context.Orders.AddRange(
                     new Order
                     {
                         CustomerId=1,
                         Movie=new List<Movie>(),
+                     
                         TotalPrice=100,
                         PurchaseDate=DateTime.Now
+                    });
+                context.Customers.AddRange(
+                    new Customer
+                    {
+                        Name= "Gökhan",
+                        Surname="Esen",
+                        Email="test",
+                        Password="test",
+                        FavoriteGenre=new List<Genre>(),
+                        Order=new List<Order>(),
                     });
 
                 context.SaveChanges();

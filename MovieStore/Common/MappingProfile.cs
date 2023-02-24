@@ -3,6 +3,7 @@ using MovieStore.Entities;
 using MovieStore.Operations.ActorOperations.CreateActor;
 using MovieStore.Operations.ActorOperations.GetActor;
 using MovieStore.Operations.CustomerOperations.CreateCustomer;
+using MovieStore.Operations.CustomerOperations.GetCustomer;
 using MovieStore.Operations.DirectorOperations.CreateDirector;
 using MovieStore.Operations.DirectorOperations.GetDirector;
 using MovieStore.Operations.GenreOperations.CreateGenre;
@@ -42,11 +43,15 @@ namespace MovieStore.Common
             CreateMap<Genre, GenresViewModel>();
 
             CreateMap<CreateCustomerModel, Customer>();
+            CreateMap<Customer, CustomerDetailViewModel>();
+            CreateMap<Customer, CustomerViewModel>();
 
 
             CreateMap<CreateOrderModel,Order>();
             CreateMap<Order, OrderDetailViewModel>();
             CreateMap<Order, OrderViewModel>();
+
+          
         }
     }
 }

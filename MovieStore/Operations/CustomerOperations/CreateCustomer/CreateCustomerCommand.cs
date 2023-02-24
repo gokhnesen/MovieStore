@@ -36,8 +36,8 @@ namespace MovieStore.Operations.CustomerOperations.CreateCustomer
         public string Email { get; set; }
         public string Password { get; set; }
 
-        //public List<Order> Order { get; set; }
-        //public List<Genre> FavoriteGenres { get; set; }
+        public List<Order> Order { get; set; }
+        public List<Genre> FavoriteGenres { get; set; }
 
     }
 }
