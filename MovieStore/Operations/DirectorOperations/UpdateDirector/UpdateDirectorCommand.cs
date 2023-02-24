@@ -24,7 +24,6 @@ namespace MovieStore.Operations.DirectorOperations.UpdateDirector
             }
             director.Name = Model.Name != default ? Model.Name : director.Name;
             director.Surname=Model.Surname != default ? Model.Surname : director.Surname;
-            director.Movie = Model.Movies != default ? Model.Movies : director.Movie;
         }
     }
 
@@ -32,6 +31,5 @@ namespace MovieStore.Operations.DirectorOperations.UpdateDirector
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public List<Movie> Movies { get; set; }
     }
 }

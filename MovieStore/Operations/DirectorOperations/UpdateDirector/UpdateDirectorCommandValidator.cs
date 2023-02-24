@@ -8,7 +8,6 @@ namespace MovieStore.Operations.DirectorOperations.UpdateDirector
         {
             RuleFor(request => request.Model.Name).NotEmpty();
             RuleFor(request => request.Model.Surname).NotEmpty();
-            RuleFor(request => request.Model.Movies).NotEmpty();
 
         }
     }

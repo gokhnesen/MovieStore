@@ -9,6 +9,8 @@ using MovieStore.Operations.GenreOperations.CreateGenre;
 using MovieStore.Operations.GenreOperations.GetGenre;
 using MovieStore.Operations.MovieOperations.CreateMovie;
 using MovieStore.Operations.MovieOperations.GetMovie;
+using MovieStore.Operations.OrderOperations.CreateOrder;
+using MovieStore.Operations.OrderOperations.GetOrder;
 using static MovieStore.Operations.GenreOperations.GetGenre.GetGenreDetailQuery;
 
 namespace MovieStore.Common
@@ -40,6 +42,11 @@ namespace MovieStore.Common
             CreateMap<Genre, GenresViewModel>();
 
             CreateMap<CreateCustomerModel, Customer>();
+
+
+            CreateMap<CreateOrderModel,Order>();
+            CreateMap<Order, OrderDetailViewModel>();
+            CreateMap<Order, OrderViewModel>();
         }
     }
 }

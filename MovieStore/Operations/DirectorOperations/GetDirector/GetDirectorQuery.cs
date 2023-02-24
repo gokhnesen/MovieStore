@@ -16,7 +16,7 @@ namespace MovieStore.Operations.DirectorOperations.GetDirector
         }
         public List<DirectorsViewModel> Handle()
         {
-            var directorList = _context.Directors.Include(x=>x.Movie).OrderBy(x => x.Id).ToList();
+            var directorList = _context.Directors.OrderBy(x => x.Id).ToList();
             List<DirectorsViewModel> directorsViewModel = _mapper.Map<List<DirectorsViewModel>>(directorList);
             return directorsViewModel;
         }
@@ -26,6 +26,5 @@ namespace MovieStore.Operations.DirectorOperations.GetDirector
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public List<string> Movies { get; set; }
     }
 }

@@ -9,6 +9,5 @@ namespace MovieStore.Entities
 
         public string Name { get; set; }
         public string Surname { get; set; }
-        public List<Movie> Movie { get; set; }
     }
 }

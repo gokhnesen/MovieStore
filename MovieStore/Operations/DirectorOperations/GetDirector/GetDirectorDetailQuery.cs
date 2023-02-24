@@ -20,7 +20,7 @@ namespace MovieStore.Operations.DirectorOperations.GetDirector
 
         public DirectorDetailViewModel Handle()
         {
-            var director = _context.Directors.Include(x => x.Movie).Where(director => director.Id == DirectorId).FirstOrDefault();
+            var director = _context.Directors.Where(director => director.Id == DirectorId).FirstOrDefault();
             DirectorDetailViewModel directorViewModel = _mapper.Map<DirectorDetailViewModel>(director);
             return directorViewModel;
         }

@@ -44,7 +44,14 @@ namespace MovieStore.DatabaseOperations.Seed
                     {
                         Name="Brodirector",
                         Surname="BroSurname",
-                        Movie=new List<Movie>()
+                    });
+                context.Orders.AddRange(
+                    new Order
+                    {
+                        CustomerId=1,
+                        Movie=new List<Movie>(),
+                        TotalPrice=100,
+                        PurchaseDate=DateTime.Now
                     });
 
                 context.SaveChanges();
