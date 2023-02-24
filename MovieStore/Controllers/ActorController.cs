@@ -48,7 +48,7 @@ namespace MovieStore.Controllers
         }
 
         [HttpPut("update/{actorId}")]
-        public IActionResult UpdateAuthor([FromBody] UpdateActorModel request, int actorId)
+        public IActionResult UpdateActor([FromBody] UpdateActorModel request, int actorId)
         {
 
 
@@ -65,7 +65,7 @@ namespace MovieStore.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult AddAuthor([FromBody] CreateActorModel request)
+        public IActionResult AddActor([FromBody] CreateActorModel request)
         {
 
 
@@ -79,7 +79,7 @@ namespace MovieStore.Controllers
         }
 
         [HttpDelete("{actorId}")]
-        public async Task<IActionResult> DeleteAuthor(int actorId)
+        public async Task<IActionResult> DeleteActor(int actorId)
         {
 
 
