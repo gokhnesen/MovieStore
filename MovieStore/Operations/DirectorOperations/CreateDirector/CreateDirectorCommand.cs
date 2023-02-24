@@ -24,7 +24,7 @@ namespace MovieStore.Operations.DirectorOperations.CreateDirector
             }
 
             director = _mapper.Map<Director>(Model);
-            _context.Directors.Remove(director);
+            _context.Directors.Add(director);
             _context.SaveChanges();
         }
     }

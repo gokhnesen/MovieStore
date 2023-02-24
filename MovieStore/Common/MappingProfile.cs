@@ -2,10 +2,14 @@
 using MovieStore.Entities;
 using MovieStore.Operations.ActorOperations.CreateActor;
 using MovieStore.Operations.ActorOperations.GetActor;
+using MovieStore.Operations.CustomerOperations.CreateCustomer;
 using MovieStore.Operations.DirectorOperations.CreateDirector;
 using MovieStore.Operations.DirectorOperations.GetDirector;
+using MovieStore.Operations.GenreOperations.CreateGenre;
+using MovieStore.Operations.GenreOperations.GetGenre;
 using MovieStore.Operations.MovieOperations.CreateMovie;
 using MovieStore.Operations.MovieOperations.GetMovie;
+using static MovieStore.Operations.GenreOperations.GetGenre.GetGenreDetailQuery;
 
 namespace MovieStore.Common
 {
@@ -31,7 +35,11 @@ namespace MovieStore.Common
                                               .ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Director.Name + " " + src.Director.Surname))
                                               .ForMember(dest => dest.Actor, opt => opt.MapFrom(src => src.Actor));
 
+            CreateMap<CreateGenreModel, Genre>();
+            CreateMap<Genre, GenresDetailViewModel>();
+            CreateMap<Genre, GenresViewModel>();
 
+            CreateMap<CreateCustomerModel, Customer>();
         }
     }
 }
